@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../glad_loader.h"
-#include <glm/glm.hpp>
+#include <glm/glm/glm.hpp>
 
 #include <string>
 #include <fstream>
@@ -88,9 +88,14 @@ class Shader
                 glDeleteShader(geometry);
         }
 
-        void use()
+        void Activate()
         {
             glUseProgram(ID);
+        }
+
+        void Delete()
+        {
+            glDeleteProgram(ID);
         }
 
         void setBool(const std::string &name, bool value) const

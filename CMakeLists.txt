@@ -28,7 +28,7 @@ set(ASSIMP_INSTALL_PDB OFF CACHE BOOL "Assimp install PDB" FORCE)
 
 add_executable(${PROJECT_NAME} gl.c glad_loader.h stb_image.cpp main.cpp ${SOURCE})
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/glm)
+add_subdirectory(${CMAKE_SOURCE_DIR}/include/glm)
 
 target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/lib)
 
